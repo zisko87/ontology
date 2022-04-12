@@ -1,0 +1,816 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#"
+     xml:base="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9">
+        <rdfs:comment>Tittle: How I met your mother Series
+Author: Francisco Javier Rosado Rodriguez</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#sameAs -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#sameAs"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#appearActors -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#appearActors">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Actors"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Season"/>
+        <rdfs:comment>Indica que actor ha aparecido en cada temporada</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#hasWonActor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#hasWonActor">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Men"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Awards"/>
+        <rdfs:comment>Indica que actor ha ganado el premio a mejor actor</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#hasWonActress -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#hasWonActress">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Women"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Awards"/>
+        <rdfs:comment>Indica que actriz ha ganado el premio a mejor actriz</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#scenaryPerSeason -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#scenaryPerSeason">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Scenary"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Season"/>
+        <rdfs:comment>Indica que escena son utilizadas en cada temporada</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#seasonEachPlatform -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#seasonEachPlatform">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Plataforms"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Season"/>
+        <rdfs:comment>Indica que temporadas se encuentran en cada plataforma</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#durationEpisodie -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#durationEpisodie">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Season"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>tiempo de duracion de cada episodie de una temprada</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#metreScena -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#metreScena">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Scenary"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>Metros cuadrados que tiene la escena</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#numEpisodie -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#numEpisodie">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Season"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>Numero de episodio de cada temporada</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#numViewEpisodie -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#numViewEpisodie">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Season"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>Numero de visualizaciones de episodios</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Actors -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Actors">
+        <rdfs:comment>Actores que participan en la serie</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Amazon -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Amazon">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Plataforms"/>
+        <rdfs:comment>Plataforma de Amazon</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Awards -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Awards">
+        <rdfs:comment>Premios recibidos</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Best_Actor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Best_Actor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Awards"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Best_Actress -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Best_Actress">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Awards"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Best_Episodies -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Best_Episodies">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Awards"/>
+        <rdfs:comment>Mejores Episodios de las series</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Best_Series -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Best_Series">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Awards"/>
+        <rdfs:comment>Premio recibido a las mejores series</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#HBO -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#HBO">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Plataforms"/>
+        <rdfs:comment>Plataforma HBO</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Indoors -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Indoors">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Scenary"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Outdoors"/>
+        <rdfs:comment>Escenario en interior donde se ha rodado la serie</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Main_Character -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Main_Character">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Actors"/>
+        <rdfs:comment>Actores principales que participan en la serie</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Men -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Men">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Main_Character"/>
+        <rdfs:comment>Actores principales que participan en la serie</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Netflix -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Netflix">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Plataforms"/>
+        <rdfs:comment>Plataforma Netflix</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Outdoors -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Outdoors">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Scenary"/>
+        <rdfs:comment>Escenarios en exterior donde se ha rodado la serie</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Plataforms -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Plataforms">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#seasonEachPlatform"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Season"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Plataformas donde se puede ver la serie</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Scenary -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Scenary">
+        <rdfs:comment>Escenarios en donde se ha rodado la serie</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Season -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Season">
+        <rdfs:comment>Temporadas de la serie</rdfs:comment>
+        <rdfs:sameAs>http://dbpedia.org/resource/Category:How_I_Met_Your_Mother_seasons</rdfs:sameAs>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Season1 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Season1">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Season"/>
+        <rdfs:comment>Temporada 1 de la serie</rdfs:comment>
+        <rdfs:sameAs>http://dbpedia.org/resource/Category:How_I_Met_Your_Mother_(season_1)_episodes</rdfs:sameAs>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Season2 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Season2">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Season"/>
+        <rdfs:comment>Temporada 2 de la serie</rdfs:comment>
+        <rdfs:sameAs>http://dbpedia.org/resource/Category:How_I_Met_Your_Mother_(season_2)_episodes</rdfs:sameAs>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Season3 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Season3">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Season"/>
+        <rdfs:comment>Temporada 3 de la serie</rdfs:comment>
+        <rdfs:sameAs>http://dbpedia.org/resource/Category:How_I_Met_Your_Mother_(season_3)_episodes</rdfs:sameAs>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Season4 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Season4">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Season"/>
+        <rdfs:comment>Temporada 4 de la serie</rdfs:comment>
+        <rdfs:sameAs>http://dbpedia.org/resource/Category:How_I_Met_Your_Mother_(season_4)_episodes</rdfs:sameAs>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Season5 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Season5">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Season"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Season_6 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Season_6">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Season"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Season_7 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Season_7">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Season"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Season_8 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Season_8">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Season"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Season_9 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Season_9">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Season"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Secondary_Character -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Secondary_Character">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Actors"/>
+        <rdfs:comment>Actores secundarios y figurantes que participan en la serie</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Women -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Women">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Main_Character"/>
+        <rdfs:comment>Actrices principales que participan en la serie</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Disney+ -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Disney+">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Plataforms"/>
+        <rdfs:comment>Plataforma Disney +</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Barney_Stinson -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Barney_Stinson">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Men"/>
+        <appearActors rdf:resource="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Season5"/>
+        <appearActors rdf:resource="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Season_1"/>
+        <appearActors rdf:resource="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Season_2"/>
+        <appearActors rdf:resource="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Season_3"/>
+        <appearActors rdf:resource="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Season_4"/>
+        <appearActors rdf:resource="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Season_6"/>
+        <appearActors rdf:resource="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Season_7"/>
+        <appearActors rdf:resource="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Season_8"/>
+        <appearActors rdf:resource="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Season_9"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Best_Actor -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Best_Actor">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Awards"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Best_Actress -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Best_Actress">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Awards"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Ep_1x1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Ep_1x1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Season1"/>
+        <durationEpisodie rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40</durationEpisodie>
+        <numViewEpisodie rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">155200</numViewEpisodie>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Ep_1x2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Ep_1x2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Season1"/>
+        <durationEpisodie rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">42</durationEpisodie>
+        <numViewEpisodie rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">300456</numViewEpisodie>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Ep_2x1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Ep_2x1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Season2"/>
+        <durationEpisodie rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">45</durationEpisodie>
+        <numViewEpisodie rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1234987</numViewEpisodie>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#House -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#House">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Scenary"/>
+        <metreScena rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">120</metreScena>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Lily_Aldrin -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Lily_Aldrin">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Women"/>
+        <appearActors rdf:resource="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Season5"/>
+        <appearActors rdf:resource="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Season_1"/>
+        <appearActors rdf:resource="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Season_2"/>
+        <appearActors rdf:resource="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Season_3"/>
+        <appearActors rdf:resource="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Season_4"/>
+        <appearActors rdf:resource="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Season_6"/>
+        <appearActors rdf:resource="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Season_7"/>
+        <appearActors rdf:resource="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Season_8"/>
+        <appearActors rdf:resource="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Season_9"/>
+        <hasWonActress rdf:resource="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Best_Actress"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Marvin_Ericksen -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Marvin_Ericksen">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Secondary_Character"/>
+        <appearActors rdf:resource="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Season5"/>
+        <appearActors rdf:resource="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Season_4"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Mejor_Serie_de_Comedia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Mejor_Serie_de_Comedia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Best_Series"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Restaurant -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Restaurant">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Scenary"/>
+        <metreScena rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">239</metreScena>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Season5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Season5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Season"/>
+        <numEpisodie rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">24</numEpisodie>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Season_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Season_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Season"/>
+        <numEpisodie rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">22</numEpisodie>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Season_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Season_2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Season"/>
+        <numEpisodie rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">22</numEpisodie>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Season_3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Season_3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Season"/>
+        <numEpisodie rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</numEpisodie>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Season_4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Season_4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Season"/>
+        <numEpisodie rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">24</numEpisodie>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Season_6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Season_6">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Season"/>
+        <numEpisodie rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">24</numEpisodie>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Season_7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Season_7">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Season"/>
+        <numEpisodie rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">24</numEpisodie>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Season_8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Season_8">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Season"/>
+        <numEpisodie rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">24</numEpisodie>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Season_9 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Season_9">
+        <rdf:type rdf:resource="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Season"/>
+        <numEpisodie rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">24</numEpisodie>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Best_Actor">
+        <rdfs:comment>Premio recibido a los mejores actores</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Best_Actress">
+        <rdfs:comment>Premios recibidos a las mejores actrices</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Season5">
+        <rdfs:sameAs>http://dbpedia.org/resource/Category:How_I_Met_Your_Mother_(season_5)_episodes</rdfs:sameAs>
+        <rdfs:comment>Temporada 5 de la serie</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Season_6">
+        <rdfs:comment>Temporada 6 de la serie</rdfs:comment>
+        <rdfs:sameAs>http://dbpedia.org/resource/Category:How_I_Met_Your_Mother_(season_6)_episodes</rdfs:sameAs>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Season_7">
+        <rdfs:comment>Temporada 7 de la serie</rdfs:comment>
+        <rdfs:sameAs>http://dbpedia.org/resource/Category:How_I_Met_Your_Mother_(season_7)_episodes</rdfs:sameAs>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Season_8">
+        <rdfs:comment>Temporada 8 de la serie</rdfs:comment>
+        <rdfs:sameAs>http://dbpedia.org/resource/Category:How_I_Met_Your_Mother_(season_8)_episodes</rdfs:sameAs>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Season_9">
+        <rdfs:comment>Temporada 9 de la serie</rdfs:comment>
+        <rdfs:sameAs>http://dbpedia.org/resource/Category:How_I_Met_Your_Mother_(season_9)_episodes</rdfs:sameAs>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="urn:swrl:var#p">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#h">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Women"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#p"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#hasWonActress"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#p"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#h"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Best_Actress"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#p"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Season"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#p"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Netflix"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#p"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThan"/>
+                        <swrl:arguments>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first rdf:resource="urn:swrl:var#h"/>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1000000</rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </swrl:arguments>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Season1"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#p"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#numViewEpisodie"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl:var#p"/>
+                                        <swrl:argument2 rdf:resource="urn:swrl:var#h"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/zisko/ontologies/2022/3/untitled-ontology-9#Best_Episodies"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#p"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
